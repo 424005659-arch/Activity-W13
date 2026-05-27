@@ -1,0 +1,62 @@
+:root {
+    --bs-primary: #6f42c1;
+}
+
+/* 1. Reset everything to remove default browser gaps */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* Tinatanggal ang horizontal scrollbar */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Flex layout for the page */
+body {
+    margin: 0;
+    padding: 0; /* SIGURADUHIN NA 0 ITO */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100%;
+}
+
+/* 3. Container should push the footer down, not limit footer width */
+.container {
+    flex: 1; /* This pushes the footer to the bottom */
+}
+
+/* 4. Card Styling */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 5. THIS IS THE KEY: Force footer to be full width */
+footer {
+    width: 100%; /* Force width to viewport width */
+    margin: 0;
+    position: relative;
+    left: 0;
+    flex-shrink: 0;
+    margin: 0 !important;
+    padding: 20px 0 !important;
+}
